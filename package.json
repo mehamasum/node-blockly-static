@@ -1,0 +1,40 @@
+{
+  "name": "node-blockly-static",
+  "version": "1.0.34",
+  "description": "PXT Blockly for Node.js and Browser",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "blockly",
+    "commonjs"
+  ],
+  "dependencies": {
+    "jsdom": "^11.3.0",
+    "xmlshim": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.8.11",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "fetch": "git submodule init && git submodule update --recursive --remote",
+    "prepublish": "rm -rf lib && mkdir lib && gulp build",
+    "test": "mocha test/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehamasum/node-blockly-static"
+  },
+  "author": "Meha Masum <mehamasum@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mehamasum/node-blockly-static/issues"
+  },
+  "homepage": "https://github.com/mehamasum/node-blockly-static"
+}
